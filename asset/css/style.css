@@ -1,0 +1,63 @@
+html {
+    background: black;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+canvas {
+    z-index:-1;
+}
+
+#container {
+    position: relative;
+}
+
+#container canvas, #homer {
+    position: absolute;
+}
+
+#homer {
+    /*background-image: url("/asset/img/hrhead.png");*/
+    z-index:100;
+    position: fixed;
+    bottom: 0;
+}
+
+.question{
+    font-family: monospace;
+    font-size: 32px;
+    color: #0F0;
+    background-color: black;
+    border: solid;
+    border-color: #0F0;
+    margin: 40;
+}
+
+.question h1{
+    border-right: .1em solid #0F0;
+    overflow: hidden;
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 50 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .1em; /* Adjust as needed */
+    animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #0F0; }
+  }
